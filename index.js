@@ -61,7 +61,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/user/:email", async (req, res) => {
+    app.get("/npm", async (req, res) => {
       const email = req.params.email;
       const query = { email };
       const result = await userCollection.findOne(query);
@@ -197,7 +197,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Running ac Server solve....ha...");
+  res.send("Running ac Server solve...");
 });
 
 app.listen(port, () => {
